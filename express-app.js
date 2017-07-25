@@ -2,6 +2,15 @@ const express = require('express')
 
 const app = express()
 
+app.get('/jason.json', (request, response) => {
+  const data = {
+    name: 'Jason',
+    when: new Date(),
+    what: 'loves fooberies.'
+  }
+  response.json(data)
+})
+
 app.get('/', (request, response) => {
   response.send(`
     Hello world
